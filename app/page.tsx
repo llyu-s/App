@@ -1,182 +1,122 @@
+function YouTubeLogo({ size = 18 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z" />
+    </svg>
+  );
+}
+
+function TwitchLogo({ size = 18 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M3.9 2 2.4 6v14h5v2h2.8l2-2h3.7l6.1-6.1V2H3.9Zm16.1 11-3.5 3.5h-4.1l-2 2v-2H6.4V4H20v9Z" />
+    </svg>
+  );
+}
+
+function InstagramLogo({ size = 18 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <rect width="20" height="20" x="2" y="2" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+    </svg>
+  );
+}
+
+function XLogo({ size = 18 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M18 2 6 22M6 2l12 20" />
+    </svg>
+  );
+}
+
+function TikTokLogo({ size = 18 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M16 5v8a4 4 0 1 1-4-4" />
+    </svg>
+  );
+}
+
+function RedditLogo({ size = 18 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+      <circle cx="12" cy="12" r="8" />
+    </svg>
+  );
+}
+
 export default function PersonalWebsiteStarter() {
   const projects = [
     {
-      title: "Project One",
-      description:
-        "OSRS Ironman Series except gear is locked behind earning each respective tier level's boot drop first before I can use it in game. It turns progression into a structured challenge with a fantastical new twist - I call it being \"BootLocked\"",
+      title: "Focus",
+      description: "BootLocked OSRS Ironman series.",
       tag: "Featured",
+      dot: "bg-red-500",
+      slug: "focus",
     },
     {
-      title: "Project Two",
-      description:
-        "Designing and refining systems to understand complex medical concepts more effectively, focusing on clarity, retention, and real-world application from what I learn in medical school",
+      title: "Thinker",
+      description: "Medical learning systems.",
       tag: "In Progress",
+      dot: "bg-yellow-500",
+      slug: "thinker",
     },
     {
-      title: "Project Three",
-      description:
-        "An ongoing development...TBD",
+      title: "Improver",
+      description: "Ongoing development.",
       tag: "Ongoing",
+      dot: "bg-green-500",
+      slug: "improver",
     },
   ];
 
   const links = [
-    { label: "YouTube", href: "https://www.youtube.com/@llyus" },
-    { label: "Twitch", href: "https://www.twitch.tv/llyus" },
-    { label: "X", href: "https://x.com/llyus_" },
-    { label: "Instagram", href: "https://www.instagram.com/llyus_" },
-    { label: "TikTok", href: "https://www.tiktok.com/@llyus_" },
-    { label: "Reddit", href: "https://www.reddit.com/r/llyus/" },
+    { icon: <YouTubeLogo />, href: "#" },
+    { icon: <TwitchLogo />, href: "#" },
+    { icon: <XLogo />, href: "#" },
+    { icon: <InstagramLogo />, href: "#" },
+    { icon: <TikTokLogo />, href: "#" },
+    { icon: <RedditLogo />, href: "#" },
   ];
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-zinc-100">
-      <div className="mx-auto max-w-6xl px-6 py-8 md:px-10 lg:px-12">
-        <header className="flex flex-col gap-4 border-b border-zinc-800 pb-6 md:flex-row md:items-center md:justify-between">
-          <div>
-            <p className="text-sm uppercase tracking-[0.2em] text-zinc-400">Personal Website</p>
-            <h1 className="text-2xl font-semibold tracking-tight">llyus</h1>
-          </div>
-          <nav className="flex flex-wrap gap-3 text-sm text-zinc-300">
-            <a className="rounded-full border border-zinc-800 px-4 py-2 hover:bg-zinc-900" href="#about">About</a>
-            <a className="rounded-full border border-zinc-800 px-4 py-2 hover:bg-zinc-900" href="#work">Work</a>
-            <a className="rounded-full border border-zinc-800 px-4 py-2 hover:bg-zinc-900" href="#contact">Contact</a>
-          </nav>
-        </header>
+    <main className="min-h-screen bg-black text-white">
+      <img src="/Final Banner10(1).png" className="w-full h-48 object-cover" />
 
-        <section className="grid gap-8 py-16 md:grid-cols-[1.2fr_0.8fr] md:items-center">
-          <div className="space-y-6">
-            <p className="inline-flex rounded-full border border-zinc-800 px-3 py-1 text-xs uppercase tracking-[0.18em] text-zinc-400">
-              Thinker • Dreamer • Healer
-            </p>
-            <div className="space-y-4">
-              <h2 className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
-                A clean home for my work, ideas, and identity online.
-              </h2>
-              <p className="max-w-2xl text-base leading-7 text-zinc-300 md:text-lg">
-                Most of what I make is an attempt to think clearly, test ideas, and create something useful.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              <a
-                href="#work"
-                className="rounded-2xl bg-white px-5 py-3 text-sm font-medium text-zinc-950 transition hover:opacity-90"
-              >
-                View My Work
-              </a>
-              <a
-                href="#contact"
-                className="rounded-2xl border border-zinc-800 px-5 py-3 text-sm font-medium text-zinc-100 transition hover:bg-zinc-900"
-              >
-                Get In Touch
-              </a>
-            </div>
-          </div>
+      <div className="p-8">
+        <h1 className="text-4xl font-bold">llyus</h1>
 
-          <div className="rounded-[2rem] border border-zinc-800 bg-gradient-to-br from-zinc-900 to-zinc-950 p-6 shadow-2xl">
-            <div className="space-y-5">
-              <div className="h-56 rounded-[1.5rem] border border-zinc-800 bg-zinc-900/70 p-5">
-                <div className="flex h-full flex-col justify-between">
-                  <div>
-                    <p className="text-sm text-zinc-400">Currently focused on</p>
-                    <p className="mt-2 text-2xl font-semibold">Starting a Youtube Channel</p>
-                  </div>
-                  <div className="grid grid-cols-2 gap-3 text-sm text-zinc-300">
-                    <div className="rounded-2xl border border-zinc-800 p-3">
-                      <p className="text-zinc-500">Progress</p>
-                      <p className="mt-1">Very beginning</p>
-                    </div>
-                    <div className="rounded-2xl border border-zinc-800 p-3">
-                      <p className="text-zinc-500">Focus</p>
-                      <p className="mt-1">OSRS Series</p>
-                    </div>
-                  </div>
-                </div>
+        <div className="flex gap-4 mt-4">
+          {links.map((l, i) => (
+            <a key={i} href={l.href}>{l.icon}</a>
+          ))}
+        </div>
+
+        <section className="mt-12">
+          <h2 className="text-2xl">Who I am</h2>
+          <p className="text-zinc-400 mt-2">
+            Medical student building systems to understand complex ideas.
+          </p>
+        </section>
+
+        <section className="mt-12">
+          <h2 className="text-2xl">My Work</h2>
+
+          <div className="grid md:grid-cols-3 gap-6 mt-6">
+            {projects.map((p) => (
+              <div key={p.title} className="p-4 border border-zinc-800 rounded-xl">
+                <h3 className="text-xl">{p.title}</h3>
+                <p className="text-zinc-400">{p.description}</p>
+                <a href={`/work/${p.slug}`} className="text-sm mt-2 inline-block">
+                  Learn more →
+                </a>
               </div>
-              <p className="text-sm leading-6 text-zinc-400">
-                This changes constantly; come back again to see what else I am doing soon
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section id="about" className="grid gap-6 border-t border-zinc-800 py-14 md:grid-cols-[0.8fr_1.2fr]">
-          <div>
-            <p className="text-sm uppercase tracking-[0.18em] text-zinc-500">About</p>
-            <h3 className="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">Who I am</h3>
-          </div>
-          <div className="space-y-4 text-zinc-300">
-            <p className="leading-7">
-              I’m a medical student and creator focused on building systems that make complex things easier to understand through my interests.
-            </p>
-            <p className="leading-7">
-              This site is a collection of things I’ve made while trying to understand what works, what matters, and how to get better over time.
-            </p>
-          </div>
-        </section>
-
-        <section id="work" className="border-t border-zinc-800 py-14">
-          <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-            <div>
-              <p className="text-sm uppercase tracking-[0.18em] text-zinc-500">Selected Work</p>
-              <h3 className="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">Things I've made</h3>
-            </div>
-            <p className="text-sm leading-6 text-zinc-400 whitespace-nowrap text-right ml-auto mr-4">
-              Cards for my most recent and or favorite projects, videos, publications, designs, and ideas
-            </p>
-          </div>
-
-          <div className="mt-8 grid gap-5 md:grid-cols-3">
-            {projects.map((project) => (
-              <article
-                key={project.title}
-                className="rounded-[1.75rem] border border-zinc-800 bg-zinc-900/50 p-5 transition hover:-translate-y-0.5 hover:bg-zinc-900 flex flex-col justify-between"
-              >
-                <div>
-                  <p className="text-xs uppercase tracking-[0.16em] text-zinc-500">{project.tag}</p>
-                  <h4 className="mt-3 text-xl font-semibold tracking-tight">{project.title}</h4>
-                  <p className="mt-3 text-sm leading-6 text-zinc-300">{project.description}</p>
-                </div>
-                <button className="mt-5 text-sm font-medium text-white underline underline-offset-4 text-left self-start">
-                  Learn more
-                </button>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section id="contact" className="border-t border-zinc-800 py-14">
-          <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
-            <div>
-              <p className="text-sm uppercase tracking-[0.18em] text-zinc-500">Contact</p>
-              <h3 className="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">Links for me</h3>
-              <p className="mt-4 max-w-2xl text-zinc-300 leading-7">
-                Email me questions/suggestions! Or check out more of my stuff
-              </p>
-            </div>
-            <a
-              href="mailto:llyus.co@outlook.com"
-              className="rounded-2xl bg-white px-5 py-3 text-sm font-medium text-zinc-950 transition hover:opacity-90"
-            >
-              Email Me
-            </a>
-          </div>
-
-          <div className="mt-8 flex flex-wrap gap-3">
-            {links.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full border border-zinc-800 px-4 py-2 text-sm text-zinc-300 hover:bg-zinc-900"
-              >
-                {link.label}
-              </a>
             ))}
           </div>
         </section>
       </div>
-    </div>
+    </main>
   );
 }
